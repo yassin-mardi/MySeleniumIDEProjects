@@ -1,0 +1,2053 @@
+{
+  "id": "12aa926e-90af-42e2-9183-47ebcda6f31d",
+  "version": "2.0",
+  "name": "ONEPAY",
+  "url": "http://sispay.net/1pay/login",
+  "tests": [{
+    "id": "618fa847-067f-47c5-b0eb-4f279df4c464",
+    "name": "s'authentifier",
+    "commands": [{
+      "id": "3b200a11-c675-4f77-a7a8-8b484d5101fe",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a95fd1cc-e09b-4200-b312-38fe1f5e9262",
+      "comment": "",
+      "command": "type",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=.ng-touched:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "TESTTEST"
+    }, {
+      "id": "bd97af2d-087d-40b2-97ac-be418ee07f15",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/span/input", "xpath:position"]
+      ],
+      "value": "123456789"
+    }, {
+      "id": "771492eb-791e-400c-b081-417f28adacbe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-text",
+      "targets": [
+        ["css=.ui-button-text", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Connexion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "09e963f0-dcf5-4edb-a127-d2ba571f9a1a",
+    "name": "redirection vers inscription",
+    "commands": [{
+      "id": "d563ad07-2e2d-4d41-9ab1-3ccd2ed8e54b",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "726e1d63-10c2-40c8-9704-782e2e89bd58",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Inscrivez-vous",
+      "targets": [
+        ["linkText=Inscrivez-vous", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Inscrivez-vous')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/1pay/Signup')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Inscrivez-vous')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5d0c147c-e725-4b17-8e46-7ebcff4b179c",
+    "name": "redirection vers authentification",
+    "commands": [{
+      "id": "0b8cf30d-407e-4fdf-a402-7e9178d783d2",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d395db70-24e1-4ea4-aa08-850f9ff5ebf2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Inscrivez-vous",
+      "targets": [
+        ["linkText=Inscrivez-vous", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Inscrivez-vous')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/1pay/Signup')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Inscrivez-vous')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba5cf73b-b98f-43b6-9a84-3a6eb02a39a0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Identifiez-vous",
+      "targets": [
+        ["linkText=Identifiez-vous", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Identifiez-vous')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/1pay/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Identifiez-vous')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "26ab4db0-db4c-4fba-8444-ae5cbecadedd",
+    "name": "deconnexion 1",
+    "commands": [{
+      "id": "04e761e0-1543-4192-a979-c0b9e4e8daf3",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9771187d-3fd9-439f-8c06-d08d98abbf4b",
+      "comment": "",
+      "command": "type",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=.ui-g-12:nth-child(1) .ui-inputtext", "css:finder"],
+        ["xpath=//input[@name='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "TESTTEST"
+    }, {
+      "id": "f9ae9120-e567-4087-a6fb-0f9361cfaa97",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/span/input", "xpath:position"]
+      ],
+      "value": "123456789"
+    }, {
+      "id": "f1424ac0-4447-4d9a-8110-39a9e0ed102f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button",
+      "targets": [
+        ["css=.ui-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Connexion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a09f51a4-6d1d-4258-98e5-8e7c9bf1d435",
+    "name": "deconnexion 2",
+    "commands": [{
+      "id": "f11be93f-2646-4987-bc58-f469117d0764",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75644ca0-f5ec-4ad8-a40e-5f6ef8da8cf9",
+      "comment": "",
+      "command": "type",
+      "target": "name=login",
+      "targets": [],
+      "value": "TESTTEST"
+    }, {
+      "id": "7a9ddb2c-73d4-4626-9a4d-bf33ef26c93a",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [],
+      "value": "123456789"
+    }, {
+      "id": "c746786f-6ee2-43c9-ac4d-ecaad4f27d30",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button",
+      "targets": [
+        ["css=.ui-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Connexion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd0934a9-f577-4702-9c03-60810b9b6e6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.profile-image-wrapper > img",
+      "targets": [
+        ["css=.profile-image-wrapper > img", "css:finder"],
+        ["xpath=//span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9987b65f-369c-445b-8863-254b185a6eab",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=exit_to_appLogout",
+      "targets": [
+        ["linkText=exit_to_appLogout", "linkText"],
+        ["css=.fadeInDown:nth-child(2) a", "css:finder"],
+        ["xpath=//app-topbar/div/div/ul/li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'exit_to_appLogout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "aea67594-7484-418b-a89c-97bf7147235c",
+    "name": "deconnexion 2 mobile view",
+    "commands": [{
+      "id": "7809de26-11fe-4ada-94ab-059990e43458",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eaa8eb10-52d0-40a0-b8a2-e888bd72f7d0",
+      "comment": "",
+      "command": "type",
+      "target": "name=login",
+      "targets": [],
+      "value": "TESTTEST"
+    }, {
+      "id": "58a3a0d8-a15f-4372-9d7a-14401ad48bd7",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [],
+      "value": "123456789"
+    }, {
+      "id": "7045a845-9ff8-487f-be42-f3c027950cc1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button",
+      "targets": [
+        ["css=.ui-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Connexion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "98adc447-0076-45cc-ada7-98074ec0adee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.topbar-menu-btn > .material-icons",
+      "targets": [
+        ["css=.topbar-menu-btn > .material-icons", "css:finder"],
+        ["xpath=//a[2]/i", "xpath:position"],
+        ["xpath=//i[contains(.,'')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55f227cb-2214-49c4-b57d-46063c39df40",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kappa Keepo2 - 123 123 1221",
+      "targets": [
+        ["linkText=Kappa Keepo2 - 123 123 1221", "linkText"],
+        ["css=.profile-item > a", "css:finder"],
+        ["xpath=(//a[contains(@href, '#')])[5]", "xpath:href"],
+        ["xpath=//app-topbar/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kappa Keepo2 - 123 123 1221')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2daef642-7b0a-48d3-a502-95b83265ef9e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=exit_to_appLogout",
+      "targets": [
+        ["linkText=exit_to_appLogout", "linkText"],
+        ["css=.fadeInDown:nth-child(2) a", "css:finder"],
+        ["xpath=//app-topbar/div/div/ul/li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'exit_to_appLogout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "2d5bfe34-0fbf-4ccc-a5d5-fde7efac92f4",
+    "name": "afficher synthèse",
+    "commands": [{
+      "id": "29768caf-41ba-412e-9da1-79db737b4091",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "215e384c-23b1-48ff-870b-edfb9d336a7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.active-menuitem-routerlink",
+      "targets": [
+        ["css=.active-menuitem-routerlink", "css:finder"],
+        ["xpath=(//a[contains(@href, '/1pay/Merchant')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5d9f359a-6a73-4ef5-b972-0ee677045a45",
+    "name": "recharger",
+    "commands": [{
+      "id": "188dc3ec-537c-47d4-9883-c32d42b8e048",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c42dbaf-39a4-4215-a9f5-ffedf75b82e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(2) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f28e7c18-c824-4b3c-8af1-4d3f9dfccee3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-6:nth-child(2) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-6:nth-child(2) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Merchant/Services/Evoucher')]", "xpath:href"],
+        ["xpath=//li[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d720e6e-fb67-43b6-950a-6f5790b19d66",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 10)+5",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "98afa3e1-50af-4bac-b2fe-18367f534426",
+      "comment": "",
+      "command": "echo",
+      "target": "${count}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9848c504-5fef-4da3-917d-866f005f70a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list_deno:nth-child(2) > .ng-star-inserted > .ng-star-inserted:nth-child(${count}) > span",
+      "targets": [
+        ["css=.list_deno:nth-child(2) > .ng-star-inserted > .ng-star-inserted:nth-child(1) > span", "css:finder"],
+        ["xpath=//div/div/div/ul/li/span", "xpath:position"],
+        ["xpath=//span[contains(.,'DHS')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69e342d1-32b1-459e-afa7-8ee88825ead1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 3)+1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "7c08a510-0fbc-4808-992d-1108678570bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button:nth-child(${counter}) > .ui-button-text",
+      "targets": [
+        ["css=.ui-button:nth-child(3) > .ui-button-text", "css:finder"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/p-table/div/div/table/thead/div/p-selectbutton/div/div[3]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Chéque')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9676895-8686-4cc3-95ae-26726224059c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn > .ui-button-text",
+      "targets": [
+        ["css=.green-btn > .ui-button-text", "css:finder"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/div/button[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//button[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Confirmer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f1d80208-7b0e-42fa-88b0-233150c45367",
+    "name": "annuler recharge",
+    "commands": [{
+      "id": "69fdb5d5-b14e-4f56-82fd-eb90be547b35",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46f4ee2d-3316-4090-b93c-54c2ea6db240",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(2) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e20ae5b-6cf9-4ddf-b23b-1d1381ab4971",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-6:nth-child(2) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-6:nth-child(2) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Merchant/Services/Evoucher')]", "xpath:href"],
+        ["xpath=//li[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95937aca-b991-4386-82da-9543e9457db4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 10)+5",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "5c9ebacb-8d8b-47a4-ade2-9f0184c66037",
+      "comment": "",
+      "command": "echo",
+      "target": "${count}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f6e01ba-b49c-4d23-a1a6-8cf390018494",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list_deno:nth-child(2) > .ng-star-inserted > .ng-star-inserted:nth-child(${count}) > span",
+      "targets": [
+        ["css=.list_deno:nth-child(2) > .ng-star-inserted > .ng-star-inserted:nth-child(1) > span", "css:finder"],
+        ["xpath=//div/div/div/ul/li/span", "xpath:position"],
+        ["xpath=//span[contains(.,'DHS')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8dcdc497-ee2d-42a2-9643-e6cda0c99d1e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 3)+1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "47abad63-345b-46ed-aa72-a62530734a6c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button:nth-child(${counter}) > .ui-button-text",
+      "targets": [
+        ["css=.ui-button:nth-child(3) > .ui-button-text", "css:finder"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/p-table/div/div/table/thead/div/p-selectbutton/div/div[3]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Chéque')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4f6be16-41cd-4bf5-9abb-27caefa5f291",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-icon-left",
+      "targets": [
+        ["css=.ui-button-icon-left", "css:finder"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "55787c2f-42c1-4fef-a025-8501abe1c376",
+    "name": "ajouter donation",
+    "commands": [{
+      "id": "59c7d6e8-c95e-4589-a146-9dda324a56d7",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "083b4737-23ed-4a98-b94e-ca686a7734b6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "391b3d91-3aec-4837-86e0-0cb6ad251da7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-6:nth-child(5) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89442eae-8621-49cc-83db-a99fc62d12f3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 7)+2",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "aaa8ed4e-aa60-48ae-b50e-21fc87f8c771",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 2)+1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "62c00cb9-c44f-4454-9339-3db5aee5646b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list_deno:nth-child(${count}) .ng-star-inserted:nth-child(${counter})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a661a802-23e4-4327-9124-a1da71de23a4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 100)",
+      "targets": [],
+      "value": "montant"
+    }, {
+      "id": "9d7d6d9a-bf34-48ec-a8c8-53a87ef57473",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@value='1']",
+      "targets": [],
+      "value": "${montant}"
+    }, {
+      "id": "9413f61e-53aa-475c-9a69-04f54cf7d374",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 3)+1",
+      "targets": [],
+      "value": "mode"
+    }, {
+      "id": "bc95f746-59e2-418b-b25a-cd80b4613ea9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-text-only:nth-child(${mode}) > .ui-button-text",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34f73e02-d8a5-408b-9e2e-5797a0b8274a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[2]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ea9a5e9-2566-41b0-ab10-0d0558571fbf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-touched",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39148993-5079-4958-aa4d-eddff7d3eb07",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-text-icon-left:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17180573-079a-4a2f-9b29-643996efcf7e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-pristine",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4300a89d-2eda-4b26-adc5-1bd945b1aa14",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-text-icon-left:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "51b0f6aa-3cb1-40f7-a083-04f3790fe779",
+    "name": "annuler donation",
+    "commands": [{
+      "id": "d9f0bda3-b53f-4eae-9f8e-89d286899f62",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b200ed89-513c-4bc1-9472-ba81ff6eeeb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "023caefd-af35-4191-ac12-ccc2eafd5b25",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-6:nth-child(5) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d27a6eb-3438-4d75-bef7-dc1c6b201428",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 7)+2",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "2ad3c12f-798f-44a4-a701-f9f22c1fcce7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 2)+1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "9b0c01b3-c14d-49aa-b934-c130f10eb481",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list_deno:nth-child(${count}) .ng-star-inserted:nth-child(${counter})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93683a11-79b1-457f-9336-3a2dc8dfb509",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 100)",
+      "targets": [],
+      "value": "montant"
+    }, {
+      "id": "57ffb590-b0ac-4d5c-baf2-5c4a68745e99",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@value='1']",
+      "targets": [],
+      "value": "${montant}"
+    }, {
+      "id": "b9febbca-0582-4476-b635-66d5dabbafec",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 3)+1",
+      "targets": [],
+      "value": "mode"
+    }, {
+      "id": "789d2d28-15dc-4675-a292-b1d7cc01f643",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-text-only:nth-child(${mode}) > .ui-button-text",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec5a5606-a2e8-422c-97dd-6b0f07a039cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.red-btn",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7aae343e-9ec8-45ec-a02a-b82ceba505d1",
+    "name": "ajouter pub",
+    "commands": [{
+      "id": "91f35653-cc83-4e59-b93a-bc15e6e413a5",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8843f1b-9855-44d8-9753-df628ef7495c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78e9cf1f-2e8c-4da0-8b89-4584b9a52dd4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-6:nth-child(3) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d19654e-1767-428d-b53d-829cf3e4fd99",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 3)+2",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "ec59ac5b-05f3-4d6e-b14f-b02ec6186a49",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list_deno:nth-child(${count}) .ng-star-inserted",
+      "targets": [
+        ["css=.list_deno:nth-child(2) .ng-star-inserted", "css:finder"],
+        ["xpath=//div/div/div/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'6 DHS')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "604a58a5-7ed3-458b-837b-3e69c3561444",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 3)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "52c4abdf-02b4-470e-8361-25d4e71f105b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button:nth-child(${count})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc08b466-ceb8-49dd-9c4e-3650bce1d380",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a6a891d-1b75-4389-92ff-625acd6f98c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-text-icon-left",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56f06c2b-20cf-42a7-937c-72dfb2ecf964",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-untouched",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "231b63db-2317-4052-ab47-99ff254753f9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-text-icon-left:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "714b4a98-d7dc-49cf-ab36-f14127120a86",
+    "name": "annuler pub ",
+    "commands": [{
+      "id": "3637d336-ee97-496b-a76d-f8fc5e93d935",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "548aa812-3290-434f-a2a3-ad7b26a15b03",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c32c2a33-c197-4142-a7d5-e4c300758ef0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-6:nth-child(3) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "891b025e-3155-41b6-9043-7db805cc3a37",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 3)+2",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "62c9a27c-3773-4827-b36d-3fbfeb424ed6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list_deno:nth-child(${count}) .ng-star-inserted",
+      "targets": [
+        ["css=.list_deno:nth-child(2) .ng-star-inserted", "css:finder"],
+        ["xpath=//div/div/div/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'6 DHS')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cc2debd-5463-4e65-8baf-e61dbe787a15",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 3)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "6e5e0c33-a426-41ad-b173-de0a86888d50",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button:nth-child(${count})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac09e3c0-9d1d-4c09-8f4e-6ce96166f2f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.red-btn",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0e768112-31b2-4d02-89da-c2a4d340a9fe",
+    "name": "annuler achat avec reduction",
+    "commands": [{
+      "id": "fffc4136-0c4b-4b57-a40f-14628cb7563e",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a00ed654-f317-4d20-989d-d6606f612a78",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d42cb708-0dea-41f4-b93e-28e83f9c0908",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-6:nth-child(9) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "450323d2-6293-445c-bbff-500b0dd4a91c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list_deno:nth-child(2) .ng-star-inserted:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b11a531-9f6e-4d56-a491-6a2233add355",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d843fc03-7f1f-4eab-8ca0-bf818ade65e4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 4)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "11225565-2f7c-43a0-a8a8-9f6b85b7d8e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#step2 .ng-star-inserted:nth-child(${count})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e293b19a-a008-4ab3-8ab8-a2ca49ff6419",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 3)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "b0be6d8b-7f95-471f-a3a0-4d9aa6b58d49",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button:nth-child(${count})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98e9eeed-1530-42da-8989-cb49f4b67570",
+      "comment": "",
+      "command": "click",
+      "target": "css=.red-btn",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9e2dad64-292c-4a4b-8664-b1db9c993f43",
+    "name": "ajouter achat avec reduction ",
+    "commands": [{
+      "id": "4d52ef9e-7cb1-4409-9583-57ae5089035c",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38cc2401-c837-4487-bbea-204ab8407bab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbc261df-a9c2-47d6-9cd9-e1507a48914c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-6:nth-child(9) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfc97218-d7b7-4019-9a91-ba25aa29f716",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list_deno:nth-child(2) .ng-star-inserted:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4dc1d90f-e8d4-4c4c-9223-302075d1ab04",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dddf67f0-07aa-4329-bfe0-6fb60bd307a4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 4)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "51c41dcc-3ef6-42d0-8cbd-7419b44a1566",
+      "comment": "",
+      "command": "click",
+      "target": "css=#step2 .ng-star-inserted:nth-child(${count})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "816aeca3-680c-48a3-9027-cd73d47a688a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 3)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "1bcd8ab8-c826-47fc-bbeb-6465de0b9691",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button:nth-child(${count})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d740eba-1508-46d5-8091-21b715a33a3a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7869f521-6e46-4f61-a6d7-c21c9f2557e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-text-icon-left",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed2a6494-5ad0-4996-a1e9-63af9daf9c09",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-untouched",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ecbab64-8306-42a9-9b5b-806251bed20d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-text-icon-left:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "599745ef-c7ff-476d-afae-5d57c7d31944",
+    "name": "ajouter achat avec reduction sans mode de paiement",
+    "commands": [{
+      "id": "2922175d-48bf-4655-ad9c-fd96a85761f5",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0929fb3b-57a2-4a99-9931-b1538e6a7e7f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "424d6a73-c2d6-4bd2-b5b3-e058c3ac0e5a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-6:nth-child(9) > .ripplelink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23a45c35-6ae3-4d69-ac0b-ae7a3cd1d6ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list_deno:nth-child(2) .ng-star-inserted:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5601c67-522e-473b-ba71-ae0acd1bc37a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85842293-7f38-46e2-a55b-4dfd99502c14",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 4)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "4a0feae1-a71b-4355-9643-b149d743cad6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#step2 .ng-star-inserted:nth-child(${count})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b2a024c-eb3f-4eb1-a7f1-cb19661587ee",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@type='button'])[2]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d5dbb34-5dcf-43c9-99fa-4b4fadd5db08",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn > .ui-button-text",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "53e1d1bb-48a2-4e0c-a87d-279e4718e60d",
+    "name": "ajouter facturation",
+    "commands": [{
+      "id": "01b2e4df-2730-4f1a-bf7b-9f3524e564b9",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4b1bb73-6e3f-4117-bc99-c83cad909e50",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(2) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5cd77c4d-e864-4ab8-9618-338b64260375",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-5:nth-child(6) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-5:nth-child(6) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Provider/Services/eBill')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2a47cc7-06d3-4867-bb48-b4f61d7cd9f7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 1000)",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "92615de3-0221-4e1f-9099-6060ec0c33bf",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-g-12:nth-child(1) > .md-inputfield > .ng-untouched",
+      "targets": [
+        ["css=.ui-g-12:nth-child(1) > .md-inputfield > .ng-untouched", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/p-table/div/div/table/thead/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "nom${count}"
+    }, {
+      "id": "adfea147-efa8-41e1-85ee-5a8e6c59bb30",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//input[@type='text'])[3]",
+      "targets": [
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/p-table/div/div/table/thead/div/div/div[3]/span/input", "xpath:idRelative"],
+        ["xpath=//div[3]/span/input", "xpath:position"]
+      ],
+      "value": "${count}"
+    }, {
+      "id": "99ee21e0-14ef-4679-b289-2874bb05d0a1",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//input[@type='text'])[5]",
+      "targets": [
+        ["css=.ui-g-12:nth-child(5) .ng-pristine", "css:finder"],
+        ["xpath=(//input[@type='text'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/p-table/div/div/table/thead/div/div/div[5]/span/input", "xpath:idRelative"],
+        ["xpath=//div[5]/span/input", "xpath:position"]
+      ],
+      "value": "${count}"
+    }, {
+      "id": "765ec2af-dc58-46c8-ab2b-69aacbadd9e3",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-g-12:nth-child(2) .ng-pristine",
+      "targets": [
+        ["css=.ui-g-12:nth-child(2) .ng-pristine", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/p-table/div/div/table/thead/div/div/div[2]/span/input", "xpath:idRelative"],
+        ["xpath=//div[2]/span/input", "xpath:position"]
+      ],
+      "value": "prenomT${count}"
+    }, {
+      "id": "c179f844-3977-421e-8873-1141a2bce74a",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//input[@type='text'])[4]",
+      "targets": [
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/p-table/div/div/table/thead/div/div/div[4]/span/input", "xpath:idRelative"],
+        ["xpath=//div[4]/span/input", "xpath:position"]
+      ],
+      "value": "codeT${count}"
+    }, {
+      "id": "48a5c35e-dcfc-461c-a8d3-0cab903ffbdb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [
+        ["css=.green-btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/p-table/div/div/table/thead/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "649b58bb-a62f-4911-ad2b-5251ba80461e",
+    "name": "confirmer reservation sans remplir",
+    "commands": [{
+      "id": "22e11aad-cebd-4ff9-829d-66eea270bd80",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4b69a83-ad7c-462b-afde-fba7af0f7bc8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(2) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "386429c3-d05a-4322-8e92-4ff43a603d60",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-5:nth-child(4) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-5:nth-child(4) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Provider/Services/Reservation')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "941bce82-a10b-4b4d-9490-acd68c70a9b5",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ng-untouched",
+      "targets": [
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=(//input[@type='text'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-14-content']/div/p-table/div/div/table/thead/div/div/div[6]/span/input", "xpath:idRelative"],
+        ["xpath=//div[6]/span/input", "xpath:position"]
+      ],
+      "value": "destinationT${count}"
+    }, {
+      "id": "1f653d41-1194-4c82-aaa3-09effe1fcc77",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [
+        ["css=.green-btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-14-content']/div/p-table/div/div/table/thead/div/div/div[7]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "15ecf066-7840-493e-b7a4-ccfcd6dad410",
+    "name": "ajouter reservation",
+    "commands": [{
+      "id": "fe9ae613-351e-4319-97d4-fc2bb55e3828",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4dba6e0-df07-4cda-8126-90c8993bf71c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(2) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52c3f3bb-1a06-4119-8493-52bd4259ad26",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-5:nth-child(4) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-5:nth-child(4) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Provider/Services/Reservation')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9a56b80-2732-495e-9604-5e27fe8f8976",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 1000)",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "195be33a-8fe6-41c6-b95a-2cd332fe891d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-g-12:nth-child(1) > .md-inputfield > .ng-untouched",
+      "targets": [
+        ["css=.ui-g-12:nth-child(1) > .md-inputfield > .ng-untouched", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-14-content']/div/p-table/div/div/table/thead/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "nom${count}"
+    }, {
+      "id": "f4b4fc13-7ee8-48a1-a64e-7b057746670b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-g-12:nth-child(3) .ng-untouched",
+      "targets": [
+        ["css=.ui-g-12:nth-child(3) .ng-untouched", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-14-content']/div/p-table/div/div/table/thead/div/div/div[3]/span/input", "xpath:idRelative"],
+        ["xpath=//div[3]/span/input", "xpath:position"]
+      ],
+      "value": "${count}"
+    }, {
+      "id": "33af60e7-4918-472c-af13-b04be683e0a7",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-g-12:nth-child(5) .ng-untouched",
+      "targets": [
+        ["css=.ui-g-12:nth-child(5) .ng-untouched", "css:finder"],
+        ["xpath=//input[@value='1']", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-14-content']/div/p-table/div/div/table/thead/div/div/div[5]/span/input", "xpath:idRelative"],
+        ["xpath=//div[5]/span/input", "xpath:position"]
+      ],
+      "value": "${count}"
+    }, {
+      "id": "18b5689c-760d-491f-a4a9-2a3a6874c524",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-g-12:nth-child(2) .ng-untouched",
+      "targets": [
+        ["css=.ui-g-12:nth-child(2) .ng-untouched", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-14-content']/div/p-table/div/div/table/thead/div/div/div[2]/span/input", "xpath:idRelative"],
+        ["xpath=//div[2]/span/input", "xpath:position"]
+      ],
+      "value": "prenomT${count}"
+    }, {
+      "id": "418456cd-8579-4a72-b60e-632cf6982ae6",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-g-12:nth-child(4) .ng-untouched",
+      "targets": [
+        ["css=.ui-g-12:nth-child(4) .ng-untouched", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-14-content']/div/p-table/div/div/table/thead/div/div/div[4]/span/input", "xpath:idRelative"],
+        ["xpath=//div[4]/span/input", "xpath:position"]
+      ],
+      "value": "codeT${count}"
+    }, {
+      "id": "aa84eb88-fe32-4f76-b8f9-8e8c0c89356e",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ng-pristine",
+      "targets": [
+        ["css=.ng-pristine", "css:finder"],
+        ["xpath=(//input[@type='text'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/p-table/div/div/table/thead/div/div/div[6]/span/input", "xpath:idRelative"],
+        ["xpath=//div[6]/span/input", "xpath:position"]
+      ],
+      "value": "destinationT${count}"
+    }, {
+      "id": "5f579c82-4e25-464d-9d70-6719ff26acfb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [
+        ["css=.green-btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-14-content']/div/p-table/div/div/table/thead/div/div/div[7]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4a73298e-b4c5-4699-a15e-86da2b454494",
+    "name": "confirmer facturation sans remplir",
+    "commands": [{
+      "id": "dd5dc845-a75d-4f0b-abd3-fc2a36d49ca9",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf8ccbd6-0b0f-41e7-8292-b2f85bdb5f8a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(2) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(2) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8df9adf5-8b20-4855-a3b4-fd1d298c963a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-5:nth-child(6) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-5:nth-child(6) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Provider/Services/eBill')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb855516-b3dc-4ab0-9139-857f6c7f77be",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 1000)",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "d0e52f40-24ff-4a9d-8136-2fe371051e09",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [
+        ["css=.green-btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/p-table/div/div/table/thead/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "24b916ea-7705-4499-af63-743a069a0a19",
+    "name": "afficher tout les transaction",
+    "commands": [{
+      "id": "451d27c1-1b16-4475-9a82-1b71830c1b27",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f222f3fd-9097-41f7-aa59-aeab1b4fbb67",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(3) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(3) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Merchant/Transacations')]", "xpath:href"],
+        ["xpath=//div/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "60149309-d13d-4efd-83bd-235f07543160",
+    "name": "partager solde",
+    "commands": [{
+      "id": "f789fb53-0f5e-4da8-baf1-7017f38ac01a",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4367aa34-41f9-4ddf-8b59-14f0fbf9dfc9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(4) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(4) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Merchant/ShareSolde')]", "xpath:href"],
+        ["xpath=//div/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1648c739-8bc9-459c-b975-9af72629b6c6",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-g-12:nth-child(1) .ng-untouched",
+      "targets": [
+        ["css=.ui-g-12:nth-child(1) .ng-untouched", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "0690660931"
+    }, {
+      "id": "7115ceda-c615-4254-9207-1fe89d2bc5bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [
+        ["css=.green-btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'ui-btn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ac3274a-667a-4b44-b139-06fe8f7561c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-g-12:nth-child(5) > .black-btn",
+      "targets": [
+        ["css=.ui-g-12:nth-child(5) > .black-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Suivant')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e403dde-144e-4766-81d1-552e95784479",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 2000)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "247eacd6-2462-454d-b3b8-3ce9f5e3c21a",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ng-untouched",
+      "targets": [
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@type='number']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "${count}"
+    }, {
+      "id": "c160a9ea-6524-4bf7-9233-19e7e59b68fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-g-12:nth-child(4) > .black-btn",
+      "targets": [
+        ["css=.ui-g-12:nth-child(4) > .black-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4bd45d2-0178-4e95-b78b-9632a3c44a22",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-g-12 > .ng-star-inserted",
+      "targets": [
+        ["css=.ui-g-12 > .ng-star-inserted", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Valider')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "131a208c-cbc7-4be3-8182-47adcbeac83c",
+    "name": "destinataire non valide",
+    "commands": [{
+      "id": "d5e6ee96-5405-4795-b7c5-572bd708319d",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d053e980-cec4-45c8-80f4-01ae05c301b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(4) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(4) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Merchant/ShareSolde')]", "xpath:href"],
+        ["xpath=//div/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a944b17-8c23-4cff-8f41-dfa598fb6613",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 2000)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "92ef4f85-9d9c-4b33-a52e-8fdff46b6e5d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-g-12:nth-child(1) .ng-untouched",
+      "targets": [
+        ["css=.ui-g-12:nth-child(1) .ng-untouched", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${count}"
+    }, {
+      "id": "2d1b6f8a-2334-44c9-ae17-46421aa399a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [
+        ["css=.green-btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'ui-btn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3089db22-7600-4a58-b581-e3fcb48f055a",
+    "name": "precedent partage solde",
+    "commands": [{
+      "id": "6cc8643e-753d-4167-b2cf-774ab913108b",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cfa04f8-615f-4e86-b9db-cdabc315e090",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(4) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(4) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Merchant/ShareSolde')]", "xpath:href"],
+        ["xpath=//div/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e28559cf-9010-4c13-8aa5-b312fc45c94a",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-g-12:nth-child(1) .ng-untouched",
+      "targets": [
+        ["css=.ui-g-12:nth-child(1) .ng-untouched", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "0690660931"
+    }, {
+      "id": "16e3741e-0a4a-489f-8e26-cf95ee071fed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.green-btn",
+      "targets": [
+        ["css=.green-btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'ui-btn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "591842fd-1a7e-46ef-b345-5a05add24f1e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-g-12:nth-child(5) > .black-btn",
+      "targets": [
+        ["css=.ui-g-12:nth-child(5) > .black-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Suivant')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b315dfc4-4eb1-492f-abc9-1de40d0887dc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 2000)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "72184482-f51a-403e-a33e-dbb201811eba",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ng-untouched",
+      "targets": [
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@type='number']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "${count}"
+    }, {
+      "id": "31b32c00-7759-4e89-9f46-ff2a96fa8eab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-g-12:nth-child(4) > .black-btn",
+      "targets": [
+        ["css=.ui-g-12:nth-child(4) > .black-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b628156d-667e-4865-a5d5-a1e27343ba23",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-g-12:nth-child(7) > .red-btn",
+      "targets": [
+        ["css=.ui-g-12:nth-child(7) > .red-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[3]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25f5489f-dfd5-43d6-80ad-8f5a9acbcbce",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-g-12:nth-child(4) > .red-btn",
+      "targets": [
+        ["css=.ui-g-12:nth-child(4) > .red-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Précédent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "11c7fd2a-a468-433c-aab4-6d007b5d4226",
+    "name": "ajouter reclamation",
+    "commands": [{
+      "id": "d180dca3-0be4-414a-a5c7-b7965c560cda",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc1b69d6-1e38-49be-809b-ccdb025b0a96",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(5) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(5) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Merchant/Reclamation')]", "xpath:href"],
+        ["xpath=//div/ul/li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f6680d1-e3e2-4bf7-a041-e2602980dd0c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 1000)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "51262b11-a9a1-4b40-82c1-b89918d4768d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ng-untouched:nth-child(2)",
+      "targets": [
+        ["css=.ng-untouched:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/form/p-table/div/div/table/thead/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "reclamationT${count}"
+    }, {
+      "id": "50bbb7ca-95f3-45bc-aa61-eb54da5374e4",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-inputtext:nth-child(1)",
+      "targets": [
+        ["css=.ui-inputtext:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/form/p-table/div/div/table/thead/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "messageT${count}"
+    }, {
+      "id": "7b1a8692-c121-4eab-832e-f73606c47360",
+      "comment": "",
+      "command": "click",
+      "target": "css=.black-btn",
+      "targets": [
+        ["css=.black-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Envoyer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1eb265b1-1c41-470a-8a0d-b06181604249",
+    "name": "ajouter reclamation sans titre",
+    "commands": [{
+      "id": "f6543d82-2c54-4b82-96d8-b25094e148eb",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8accb385-b29a-423b-b1dc-56a575789b9a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(5) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(5) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Merchant/Reclamation')]", "xpath:href"],
+        ["xpath=//div/ul/li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38e56076-49c0-4024-80e3-3a3cb2f8ec77",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 1000)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "a33d8bdb-4809-4919-8474-6da50593fc4f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-inputtext:nth-child(1)",
+      "targets": [
+        ["css=.ui-inputtext:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/form/p-table/div/div/table/thead/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "messageT${count}"
+    }, {
+      "id": "844ee5e9-4660-4a75-af7b-464df3850bb8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.black-btn",
+      "targets": [
+        ["css=.black-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Envoyer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "577a72b1-3b4c-4bac-9bea-057afcf4e997",
+    "name": "ajouter reclamation sans message",
+    "commands": [{
+      "id": "f47b0160-bc7a-4d95-bd4f-f09ccfd86d97",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a27bf49-8a56-48c8-993f-d453afb7d96a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(5) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(5) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Merchant/Reclamation')]", "xpath:href"],
+        ["xpath=//div/ul/li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82dfd981-2b3c-42eb-9f68-2cab4c6b6621",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 1000)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "2730f6cd-008f-4bd0-affa-d6fb73472363",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ng-untouched:nth-child(2)",
+      "targets": [
+        ["css=.ng-untouched:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/form/p-table/div/div/table/thead/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "reclamationT${count}"
+    }, {
+      "id": "0dbe6636-3e14-43e9-8695-ded8519f76b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.black-btn",
+      "targets": [
+        ["css=.black-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Envoyer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5e218287-5b83-4778-9bc2-a80e56d97826",
+    "name": "annuler reclamation",
+    "commands": [{
+      "id": "4c0b3d01-989e-4d90-b60e-cddfe52f70a1",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c995bab-29d7-4064-8bd5-701da9722530",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(5) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(5) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Merchant/Reclamation')]", "xpath:href"],
+        ["xpath=//div/ul/li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "763bf2c0-2b5a-46dd-b7db-5229937e0888",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 1000)+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "f0926853-67ed-4e4c-9337-a87d7cc9499b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ng-untouched:nth-child(2)",
+      "targets": [
+        ["css=.ng-untouched:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/form/p-table/div/div/table/thead/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "reclamationT${count}"
+    }, {
+      "id": "8504592a-347f-4c1e-bc8d-b93ab9efb8c9",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ui-inputtext:nth-child(1)",
+      "targets": [
+        ["css=.ui-inputtext:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/form/p-table/div/div/table/thead/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "messageT${count}"
+    }, {
+      "id": "0275a129-547a-46c9-881c-eea7aa08b49b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.red-btn",
+      "targets": [
+        ["css=.red-btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='ui-panel-2-content']/div/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'ui-btn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "04ebe8f1-cf56-4edc-933a-d13d685e996d",
+    "name": "aide page",
+    "commands": [{
+      "id": "364fddd4-c20d-43d8-beff-b0f2272f7db3",
+      "comment": "",
+      "command": "open",
+      "target": "http://sispay.net/1pay/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cecc0fc-3f93-4129-bb74-8ba59b112d04",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c4-1:nth-child(6) > .ripplelink",
+      "targets": [
+        ["css=.ng-tns-c4-1:nth-child(6) > .ripplelink", "css:finder"],
+        ["xpath=//a[contains(@href, '/1pay/Merchant/Aide')]", "xpath:href"],
+        ["xpath=//div/ul/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "6b091a1c-a9d2-42fa-a2f4-4ecff66bdc66",
+    "name": "authentification",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["618fa847-067f-47c5-b0eb-4f279df4c464", "09e963f0-dcf5-4edb-a127-d2ba571f9a1a", "5d0c147c-e725-4b17-8e46-7ebcff4b179c"]
+  }, {
+    "id": "6f751b90-4442-45da-bf59-2f9c73ad747d",
+    "name": "deconnexion",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["26ab4db0-db4c-4fba-8444-ae5cbecadedd", "a09f51a4-6d1d-4258-98e5-8e7c9bf1d435", "aea67594-7484-418b-a89c-97bf7147235c"]
+  }, {
+    "id": "445e7110-18b3-415e-b56c-ad860b7b6f6b",
+    "name": "tableau de bord",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2d5bfe34-0fbf-4ccc-a5d5-fde7efac92f4"]
+  }, {
+    "id": "b11141e7-9b54-4765-9c3e-8f08f640646d",
+    "name": "Ta3bi2a",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f1d80208-7b0e-42fa-88b0-233150c45367", "5d9f359a-6a73-4ef5-b972-0ee677045a45"]
+  }, {
+    "id": "220a1ec3-c766-49e6-9394-bc2e0bc4b303",
+    "name": "karamati",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["55787c2f-42c1-4fef-a025-8501abe1c376", "51b0f6aa-3cb1-40f7-a083-04f3790fe779"]
+  }, {
+    "id": "2af931b2-7fac-4c59-851b-b7416a8e7553",
+    "name": "Ichhar",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7aae343e-9ec8-45ec-a02a-b82ceba505d1", "714b4a98-d7dc-49cf-ab36-f14127120a86"]
+  }, {
+    "id": "ce3f18fc-877c-46ee-b232-fe588eb6c446",
+    "name": "takhfid",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["599745ef-c7ff-476d-afae-5d57c7d31944", "0e768112-31b2-4d02-89da-c2a4d340a9fe", "9e2dad64-292c-4a4b-8664-b1db9c993f43"]
+  }, {
+    "id": "799411b6-701c-48c7-8a1d-aeb3a5f29c4c",
+    "name": "hajz",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["649b58bb-a62f-4911-ad2b-5251ba80461e", "15ecf066-7840-493e-b7a4-ccfcd6dad410"]
+  }, {
+    "id": "3824a8fc-7d16-418e-bf24-a137a13a60c6",
+    "name": "facturation",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["53e1d1bb-48a2-4e0c-a87d-279e4718e60d", "4a73298e-b4c5-4699-a15e-86da2b454494"]
+  }, {
+    "id": "6f1b82b8-9337-4a74-8c1e-136fc2517d6d",
+    "name": "transaction",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["24b916ea-7705-4499-af63-743a069a0a19"]
+  }, {
+    "id": "9bd578f7-dae4-4e8a-b542-a7568006d47c",
+    "name": "partage solde",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["60149309-d13d-4efd-83bd-235f07543160", "131a208c-cbc7-4be3-8182-47adcbeac83c", "3089db22-7600-4a58-b581-e3fcb48f055a"]
+  }, {
+    "id": "b12b9b0e-f8c9-4989-b19f-30f5b9e945f3",
+    "name": " reclamation",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["11c7fd2a-a468-433c-aab4-6d007b5d4226", "577a72b1-3b4c-4bac-9bea-057afcf4e997", "1eb265b1-1c41-470a-8a0d-b06181604249", "5e218287-5b83-4778-9bc2-a80e56d97826"]
+  }, {
+    "id": "f446e1cb-ea70-4143-94e4-08b0f202e5ad",
+    "name": "aide",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["04ebe8f1-cf56-4edc-933a-d13d685e996d"]
+  }],
+  "urls": ["http://sispay.net/1pay/login"],
+  "plugins": []
+}
